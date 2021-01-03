@@ -1,4 +1,6 @@
 // go test -v
+// benchmark: go test -v  -bench=.
+
 package word
 
 import (
@@ -57,5 +59,12 @@ func TestRandomPalindromes(t *testing.T){
 		if !IsPalindrome(p) {
 			t.Errorf("IsPalindrome(%q) = false", p)
 		}
+	}
+}
+
+
+func BenchmarkIsPalindrome(b *testing.B) {
+	for i:=0; i<b.N;i++{
+		IsPalindrome("A man, a plan, a canal: POanama")
 	}
 }
