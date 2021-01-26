@@ -1,3 +1,4 @@
+// 结合netcat2使用
 package main
 
 import (
