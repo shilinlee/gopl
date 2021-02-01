@@ -1,4 +1,3 @@
-// go run main.go
 package geogetry
 
 import "math"
